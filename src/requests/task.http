@@ -1,0 +1,48 @@
+###GET TASKS
+GET http://localhost:3000/api/tasks?size=2&&page=0&&title=angular
+
+###GET TASKS
+GET http://localhost:3000/api/tasks?size=2&&page=0
+
+
+###CREATE TASK
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Angular",
+    "description": "Angular"
+}
+
+###CREATE TASK
+POST http://localhost:3000/api/tasks
+Content-Type: application/json
+
+{
+    "title": "Tarea en true",
+    "description": "Mi primera descripción true",
+    "done": true
+}   
+
+###GET TASK
+GET http://localhost:3000/api/tasks/6383e237685da55ba5ac137a
+
+
+###DELETE TASK
+DELETE http://localhost:3000/api/tasks/6383df41fb1d81e2dac26343
+
+
+###GET TRUETASKS
+GET http://localhost:3000/api/tasks/done
+
+###GET TRUETASKS
+GET http://localhost:3000/api/tasks/notdone
+
+
+###UPDATE TRUETASKS
+PUT http://localhost:3000/api/tasks/6383ec47146c6a754469509b
+Content-Type: application/json
+
+{
+    "done": true
+}
