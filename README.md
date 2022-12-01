@@ -100,6 +100,74 @@ $ npm run start
 "morgan": "^1.10.0"
 
 ```
+## API USE
+
+
+### Local USE 
+
+#### GET TASKS
+
+```
+GET http://localhost:3000/api/tasks?size={size}&&page={#page}
+```
+You can also filter task by title 
+```
+GET http://localhost:3000/api/tasks?size={size}&&page={#page}&&title={title}
+```
+
+#### CREATE TASK
+```
+POST http://localhost:3000/api/tasks
+
+{
+    "title": "Angular",
+    "description": "Angular"
+}
+```
+You can also put done attribute with this structure:  
+```
+POST http://localhost:3000/api/tasks
+
+{
+    "title": "Tarea en true",
+    "description": "Mi primera descripción true",
+    "done": true
+}
+```
+
+
+#### GET TASK
+```
+GET http://localhost:3000/api/tasks/:Task_id
+```
+
+#### DELETE TASK
+```
+DELETE http://localhost:3000/api/tasks/:Task_id
+```
+
+
+#### GET DONE TASK
+```
+GET http://localhost:3000/api/tasks/done
+```
+
+####GET NOT DONE TASK
+```
+GET http://localhost:3000/api/tasks/notdone
+```
+
+#### UPDATE TRUETASKS
+```
+PUT http://localhost:3000/api/tasks/:Task_id
+
+{
+    "description": "new description",
+    "done": true
+}
+```
+
+
 ## VSCode information (optional)
 
 If you are VSCode users, you can have a better integration with VSCode by installing the suggested extension in `.vscode/extension.json`. The starter code comes up with Settings for a seamless integration with VSCode. The Debug configuration is also provided for frontend and backend debugging experience.
